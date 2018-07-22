@@ -10,5 +10,8 @@ tmp
 # Environmet variables, example
 .env.example
 
+# Idea
+.idea
+
 # The development sqlite file
 database/development.sqlite
