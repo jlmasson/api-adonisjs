@@ -10,8 +10,8 @@ class CinemaController {
     return response.json(cinemas)
   }
 
-  async findCinema ({response, params}) {
-    let idCinema = params.id
+  static async findCinema ({response, params}) {
+    let idCinema = params.cinemaId
     const cinema = await Cinema.find(idCinema)
     await cinema.get_info()
     return response.json({data: cinema})
