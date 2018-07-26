@@ -46,7 +46,9 @@ const aceProviders = [
 |   { Route: 'Adonis/Src/Route' }
 |
 */
-const aliases = {}
+const aliases = {
+  'CinemaController': 'App/Controllers/Http/CinemaController'
+}
 
 /*
 |--------------------------------------------------------------------------

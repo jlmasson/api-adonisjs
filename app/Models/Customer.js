@@ -11,6 +11,10 @@ class Customer extends Model {
     return 'updated_at'
   }
 
+  static async find_by_column(column, value) {
+    return this.findBy(column, value)
+  }
+
   bookings () {
     return this.hasMany('App/Models/Booking')
   }

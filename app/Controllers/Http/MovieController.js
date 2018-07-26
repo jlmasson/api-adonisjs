@@ -2,7 +2,7 @@
 
 const MovieShowing = use('App/Models/MovieShowing')
 
-const CinemaController = use('App/Controllers/Http/CinemaController')
+const CinemaController = use('CinemaController')
 
 class MovieController {
   async byCinema ({response, params}) {
@@ -10,7 +10,10 @@ class MovieController {
   }
 
   async byMovie({response, params}) {
-    
+    const movie_id = params.movieId
+    const movie = await MovieShowing.find_by_column('movie_id', movie_id)
+    await movie.get_info();
+    return response.json(movie)
   }
 }
 
