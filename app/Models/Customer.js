@@ -18,6 +18,10 @@ class Customer extends Model {
   bookings () {
     return this.hasMany('App/Models/Booking')
   }
+
+  static async get_info (limit=0) {
+    return limit;
+  }
 }
 
 module.exports = Customer
